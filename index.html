@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/imask"></script>
+	<title>phone-book</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="book">
+			<div class="book__top">
+				<div class="book__top-inner">
+					<div class="book__top-inner-icon">
+						<img src="img/icon-phone.png" alt="">
+					</div>
+					<div class="book__top-inner-input">
+						<input class="top__input" type="text" placeholder="поиск ">
+					</div>
+				</div>
+			</div>
+			<div class="book__content">
+				<div class="book__item">
+					<div class="book__item-logo">
+						<img src="img/person.png" alt="">
+					</div>
+					<div class="book__item-data">
+						<div class="book__item-name">
+							Антон
+						</div>
+						<div class="book__item-phone">
+							+7-920-043-53-31
+						</div>
+					</div>
+
+					<div class="book__item-buttons">
+						<button class="book__item-delete">
+							<img class="button-img" src="img/close.png" alt="">
+						</button>
+						<button class="book__item-favourite">
+							<img class="button-love" src="img/empty-heart.png" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="book__item">
+					<div class="book__item-logo">
+						<img src="img/person.png" alt="">
+					</div>
+					<div class="book__item-data">
+						<div class="book__item-name">
+							Максим
+						</div>
+						<div class="book__item-phone">
+							+7-920-043-53-32
+						</div>
+					</div>
+
+					<div class="book__item-buttons">
+						<button class="book__item-delete">
+							<img class="button-img" src="img/close.png" alt="">
+						</button>
+						<button class="book__item-favourite">
+							<img class="button-love" src="img/heart.png" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="book__item">
+					<div class="book__item-logo">
+						<img src="img/person.png" alt="">
+					</div>
+					<div class="book__item-data">
+						<div class="book__item-name">
+							Олег
+						</div>
+						<div class="book__item-phone">
+							+7-920-043-53-51
+						</div>
+					</div>
+
+					<div class="book__item-buttons">
+						<button class="book__item-delete">
+							<img class="button-img" src="img/close.png" alt="">
+						</button>
+						<button class="book__item-favourite">
+							<img class="button-love" src="img/heart.png" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="book__item">
+					<div class="book__item-logo">
+						<img src="img/person.png" alt="">
+					</div>
+					<div class="book__item-data">
+						<div class="book__item-name">
+							Винсент
+						</div>
+						<div class="book__item-phone">
+							+7-920-043-53-53
+						</div>
+					</div>
+
+					<div class="book__item-buttons">
+						<button class="book__item-delete">
+							<img class="button-img" src="img/close.png" alt="">
+						</button>
+						<button class="book__item-favourite">
+							<img class="button-love" src="img/heart.png" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="book__item">
+					<div class="book__item-logo">
+						<img src="img/person.png" alt="">
+					</div>
+					<div class="book__item-data">
+						<div class="book__item-name">
+							Борис
+						</div>
+						<div class="book__item-phone">
+							+7-920-043-53-21
+						</div>
+					</div>
+
+					<div class="book__item-buttons">
+						<button class="book__item-delete">
+							<img class="button-img" src="img/close.png" alt="">
+						</button>
+						<button class="book__item-favourite">
+							<img class="button-love" src="img/empty-heart.png" alt="">
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="book__footer">
+				<button class="footer__btn">Добавить</button>
+			</div>
+		</div>
+		<div class="add-modal" style="display: none; align-items: center; justify-content: center;">
+			<div class="add__top">
+				<div style="display: flex; align-items: center;" class="add__top-inner">
+					<div style="margin-right: 5px;" class="add__top-inner-icon">
+						<!-- <i class="fa fa-phone-square" aria-hidden="true"></i> -->
+						<img src="img/icon-phone.png" alt="">
+					</div>
+					<div style="font-size: 16px; color: white;" class="add__top-inner-text">
+						Add contact
+					</div>
+				</div>
+				<div class="add-form">
+					<div>
+						<label for="add-name">
+							<span style="font-size: 24px; color: white;">Name</span>
+							<input id="add-name"
+								style="margin-bottom: 10px; border-radius: 20px; width: 300px; height: 40px; padding: 10px; outline: none;"
+								type="text" name="name">
+						</label>
+					</div>
+					<div>
+						<label for="add-phone">
+							<span style="font-size: 24px; color: white;">Phone</span>
+							<input id="add-phone"
+								style="margin-bottom: 10px; border-radius: 20px; width: 300px; height: 40px; padding: 10px; outline: none;"
+								type="text" name="phone">
+						</label>
+					</div>
+					<div style="margin-bottom: 20px;">
+						<label for="is-favorite">
+							<span
+								style="display: inline-block; margin-right: 5px; color: white; font-size: 24px;">Favorite</span>
+							<input style="width: 20px; height: 20px;" id="is-favorite" type="checkbox">
+						</label>
+					</div>
+
+					<button class="create-button" style="font-size: 36px;">Создать</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+	<script src="./modal.js"></script>
+</body>
+
+</html>
